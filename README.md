@@ -20,7 +20,13 @@ Your Docker containers, grown as an ASCII garden in the terminal.
 
 Compose projects each get their own garden bed; everything else lives in **loose seeds**.
 
-## Run
+## Run with Docker
+
+```sh
+docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/jameson13b/dockergarden
+```
+
+## Run from source
 
 ```sh
 python3 -m venv .venv
