@@ -1,0 +1,1 @@
+"""Terminal Garden TUI."""

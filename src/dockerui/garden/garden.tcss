@@ -1,0 +1,96 @@
+Screen {
+    background: #1a1410;
+}
+
+#main {
+    height: 1fr;
+}
+
+#garden {
+    width: 1fr;
+    height: 1fr;
+    padding: 0 1;
+}
+
+.bed {
+    height: auto;
+    margin-bottom: 1;
+}
+
+.bed-title {
+    color: $success;
+    text-style: bold;
+    margin: 1 0 0 1;
+}
+
+.bed-grid {
+    height: auto;
+    grid-size: 6;
+    grid-gutter: 0 1;
+    grid-rows: 9;
+    padding: 0 1;
+    border-bottom: heavy #6b4423;
+}
+
+PlantTile {
+    width: 15;
+    height: 9;
+    padding: 0 1;
+    border: round transparent;
+    text-wrap: nowrap;
+}
+
+PlantTile:focus {
+    border: round $accent;
+    background: #2a2018;
+}
+
+#journal {
+    display: none;
+    width: 45%;
+    border-left: heavy #6b4423;
+    padding: 0 1;
+}
+
+#journal.open {
+    display: block;
+}
+
+#journal-title {
+    color: $warning;
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+#journal-log {
+    height: 1fr;
+    background: #120e0b;
+}
+
+#signpost {
+    height: 1;
+    padding: 0 1;
+    background: #2a2018;
+}
+
+ConfirmUproot {
+    align: center middle;
+}
+
+#confirm {
+    width: 60;
+    height: auto;
+    padding: 1 2;
+    border: heavy $error;
+    background: $surface;
+}
+
+#confirm-buttons {
+    height: auto;
+    margin-top: 1;
+    align: center middle;
+}
+
+#confirm-buttons Button {
+    margin: 0 1;
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dockerui"
+version = "0.1.0"
+description = "Playful front-ends for your Docker containers: an ASCII garden TUI and (soon) a solar system web view."
+requires-python = ">=3.11"
+dependencies = ["textual>=0.80", "docker>=7"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio", "textual-dev"]
+
+[project.scripts]
+garden = "dockerui.garden.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"dockerui.garden" = ["*.tcss"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
